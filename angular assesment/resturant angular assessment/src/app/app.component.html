@@ -1,0 +1,65 @@
+
+<h1 style="color:ghostwhite;"> KULFI DATE ! roast the host </h1>
+
+<form (submit)="saveResturant()" >
+  <div class="form-group">
+      <div class="input-group">
+      <span class="input-group-addon">Restaurant Id</span>
+
+      <input type="number" class="form-control" name="resturantId" [(ngModel)]="resturant.resturantId" style="width: 330px;">
+      </div><br>
+      <div class="form-group">
+          <div class="input-group">
+          <span class="input-group-addon">Restaurant Name</span>
+
+      <input type="text" class="form-control" name="resturantName" [(ngModel)]="resturant.resturantName" style="width: 305px;" >
+</div><br>
+<div class="form-group">
+    <div class="input-group">
+    <span class="input-group-addon">Restaurant Location</span>
+ <input type="text" class="form-control" name="location" [(ngModel)]="resturant.location" style="width: 290px;" >
+    </div><br>
+    <div class="form-group">
+        <div class="input-group">
+        <span class="input-group-addon">Restaurant Rating</span>
+    <input type="number" class="form-control" name="rating" [(ngModel)]="resturant.rating" style="width: 305px;" >
+        </div><br>
+    <input type="submit" value="save" class="btn btn-primary" style="margin: 5px;">
+</div>
+</div>
+</div>
+</div>
+</form>
+
+
+
+<input type="submit" value=" Update " (click)="updateResturant()" class="btn btn-primary" style="margin: 5px;">
+
+<input type="submit" value=" Delete " (click)="deleteResturant()" class="btn btn-primary" style="margin: 5px;">
+
+
+<input type="submit" value=" Get By ID " (click)="getResturant()" class="btn btn-primary" style="margin: 5px;">
+
+
+<input type="submit" value=" Get All Resturant " (click)="getResturants()" class="btn btn-primary" style="margin: 5px;">
+<table>
+  <div *ngIf="showdialog">
+    <th> Resturant Id </th>
+    <th>  Resturant Name</th>
+    <th> Resturant Location </th>
+    <th> Resturant Rating </th>
+
+    <tr *ngFor="let rest of this.resturants">
+
+
+
+        <td> {{rest.resturantId}} </td>
+        <td> {{rest.resturantName}} </td>
+        <td> {{rest.location}} </td>
+        <td> {{rest.rating}} </td><br>
+
+    </tr>
+
+  </div>
+    </table>
+

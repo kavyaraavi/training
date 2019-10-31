@@ -1,0 +1,14 @@
+.a
+{
+  align-content: center;
+}
+table, th, td {
+  border: 1px solid black;
+  background: ghostwhite;
+}
+
+
+.body{
+width:300px;
+margin: 0 auto;
+}
